@@ -1,0 +1,48 @@
+import java.util.Scanner;
+ class atm{
+    public static void main(String[]args){
+        int  deb,cred,bal;
+        bal = 120000;
+        int i = 0;
+        Scanner input = new Scanner(System.in);
+         for(i=0; i<=3; i++){
+        System.out.println("Press 1 for debit--");
+        System.out.println("Press 2 for credit--");
+        System.out.println("Press 3 for checking balance--");
+        System.out.println("Press 4 for exit--");
+        System.out.println("--Select any option--");
+        int o = input.nextInt();
+        switch(o){
+            case 1:
+            System.out.println("Enter amount to be debited");
+            deb = input.nextInt();
+            if(deb <= bal){
+                bal = bal - deb;
+                System.out.println("Amount debited succesfully");
+            }else{
+                System.out.println("Insufficient balance!!");
+            }
+            System.out.println("Your balance is:");
+            System.out.println(bal);
+            break;
+            case 2:
+            System.out.println("Enter amount to be credited:");
+            cred = input.nextInt();
+            bal = bal + cred;
+            System.out.println("Your amount credited succesfully");
+            System.out.println("Your balance is:");
+            System.out.println(bal);
+            break;
+            case 3:
+            System.out.println("Your balance is:");
+            System.out.println(bal);
+            break;
+            case 4:
+            System. exit(0);
+            }
+            
+        }
+
+    }
+}
+    
